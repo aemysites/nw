@@ -1,0 +1,89 @@
+/* Hero Banner — Nationwide blue hero with heading, subtitle, CTAs */
+
+.hero-banner-container .hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-banner {
+  position: relative;
+  background-color: var(--color-brand-blue);
+  color: var(--color-white);
+  padding: var(--spacing-l) var(--spacing-m);
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.hero-banner > div {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.hero-banner h1,
+.hero-banner h2,
+.hero-banner h3,
+.hero-banner h4,
+.hero-banner h5,
+.hero-banner h6 {
+  font-family: var(--heading-accent-font-family);
+  color: var(--color-white);
+  margin-top: 0;
+}
+
+.hero-banner h1 {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.hero-banner h2 {
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  font-family: var(--body-font-family);
+  text-transform: none;
+}
+
+.hero-banner p {
+  color: var(--color-white);
+}
+
+.hero-banner a:any-link {
+  color: var(--color-white);
+  font-size: var(--body-font-size-s);
+}
+
+.hero-banner a:hover {
+  text-decoration: underline;
+}
+
+.hero-banner picture {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+}
+
+.hero-banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero-banner {
+    padding: var(--spacing-xl) 32px;
+    min-height: 360px;
+  }
+
+  .hero-banner > div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-banner h1 {
+    font-size: 36px;
+  }
+}

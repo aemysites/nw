@@ -1,0 +1,63 @@
+/* Cards Icon — Nationwide text-only cards (3-column grid, no images) */
+
+.cards-icon > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+}
+
+.cards-icon > ul > li {
+  border: 1px solid #e0e0e0;
+  border-radius: var(--button-border-radius);
+  background-color: var(--background-color);
+  padding: var(--spacing-m);
+  text-align: center;
+}
+
+.cards-icon .cards-icon-card-body {
+  margin: 0;
+}
+
+.cards-icon .cards-icon-card-body h3 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-heading);
+}
+
+.cards-icon .cards-icon-card-body p {
+  font-size: var(--body-font-size-m);
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-s);
+}
+
+.cards-icon .cards-icon-card-body a:any-link {
+  display: inline-block;
+  border: 1px solid var(--color-brand-blue);
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  color: var(--color-brand-blue);
+  font-size: var(--button-font-size);
+  text-decoration: none;
+  transition: var(--button-transition);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cards-icon .cards-icon-card-body a:hover {
+  background-color: var(--color-brand-blue);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .cards-icon > ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-l);
+  }
+}

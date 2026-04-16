@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-tile",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-16T07:23:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.nationwide.com",
+    "originPage": "Insurance homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "image-tiles",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading overlay + link",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "image tile grids with overlay text",
+      "featured content tiles",
+      "promotional image cards with links"
+    ],
+    "notSuitableFor": [
+      "text-heavy content cards",
+      "icon-based feature cards",
+      "data-driven cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-16T07:23:00.000Z"
+  }
+}

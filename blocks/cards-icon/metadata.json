@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-icon",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-16T07:23:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.nationwide.com",
+    "originPage": "Insurance homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "quick-actions",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "service offering cards with icons",
+      "product category cards",
+      "quick action cards with CTAs"
+    ],
+    "notSuitableFor": [
+      "image-heavy photo cards",
+      "testimonial cards",
+      "blog article cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/content/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-16T07:23:00.000Z"
+  }
+}
