@@ -1,0 +1,108 @@
+/* Image Cards Block */
+.image-cards {
+  --card-height: 400px;
+  --overlay-bg: rgb(0, 71, 187);
+  --overlay-text: #ffffff;
+  --overlay-padding: 20px;
+}
+
+/* Full-width layout */
+.image-cards-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.image-cards {
+  display: flex;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+/* Rows become card items */
+.image-cards > div {
+  position: relative;
+  overflow: hidden;
+  height: var(--card-height);
+}
+
+/* First card takes 2/3 width, second takes 1/3 */
+.image-cards > div:first-child {
+  flex: 2;
+}
+
+.image-cards > div:nth-child(2) {
+  flex: 1;
+}
+
+/* Card link wrapper */
+.image-cards .image-cards-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: var(--overlay-text);
+}
+
+/* Image cell */
+.image-cards .image-cards-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-cards .image-cards-image p {
+  margin: 0;
+  height: 100%;
+}
+
+.image-cards .image-cards-image picture {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.image-cards .image-cards-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Text overlay */
+.image-cards .image-cards-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--overlay-bg);
+  padding: var(--overlay-padding);
+  text-align: center;
+  z-index: 2;
+}
+
+.image-cards .image-cards-text h2 {
+  color: var(--overlay-text);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Mobile: stack cards vertically */
+@media (width < 900px) {
+  .image-cards {
+    flex-direction: column;
+  }
+
+  .image-cards > div:first-child,
+  .image-cards > div:nth-child(2) {
+    flex: none;
+    height: 300px;
+  }
+}

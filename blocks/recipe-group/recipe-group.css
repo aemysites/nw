@@ -1,0 +1,208 @@
+/* recipe-group block */
+.recipe-group {
+  --rg-title-color: #382312;
+  --rg-card-bg: #fff6e3;
+  --rg-accent: #da001c;
+  --rg-accent-text: #fff6e3;
+  --rg-text: #343434;
+  --rg-tag-color: #e11936;
+  --rg-padding: 64px 32px;
+  --rg-gap: 24px;
+
+  padding: var(--rg-padding);
+  text-align: center;
+}
+
+/* Row 1: Header section */
+.recipe-group > div:first-child {
+  margin-bottom: 32px;
+}
+
+.recipe-group h2 {
+  color: var(--rg-title-color);
+  font-family: var(--heading-font-family, 'Libre Baskerville', serif);
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.recipe-group > div:first-child p {
+  color: var(--rg-title-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+/* Row 2: Tabs */
+.recipe-group .recipe-group-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.recipe-group .recipe-group-tabs button {
+  padding: 12px 40px;
+  border: 1px solid var(--rg-text);
+  border-radius: 24px;
+  background: transparent;
+  color: var(--rg-text);
+  font-family: var(--body-font-family, 'Poppins', sans-serif);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.recipe-group .recipe-group-tabs button.active {
+  background: var(--rg-accent);
+  color: var(--rg-accent-text);
+  border-color: var(--rg-accent);
+}
+
+.recipe-group .recipe-group-tabs button:hover {
+  background: var(--rg-accent);
+  color: var(--rg-accent-text);
+  border-color: var(--rg-accent);
+}
+
+/* Row 3+: Recipe cards container */
+.recipe-group .recipe-group-cards {
+  display: flex;
+  gap: var(--rg-gap);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+/* Individual recipe card */
+.recipe-group .recipe-card {
+  background: var(--rg-card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+  width: 280px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+}
+
+.recipe-group .recipe-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.recipe-group .recipe-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.recipe-group .recipe-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.recipe-group .recipe-card-body {
+  padding: 12px 16px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recipe-group .recipe-card-tag {
+  color: var(--rg-tag-color);
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.recipe-group .recipe-card-title {
+  color: var(--rg-text);
+  font-family: var(--heading-font-family, 'Libre Baskerville', serif);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 auto;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.recipe-group .recipe-card-footer {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.recipe-group .recipe-card-footer span {
+  font-size: 13px;
+  color: var(--rg-text);
+}
+
+/* View All CTA */
+.recipe-group .recipe-group-cta {
+  text-align: center;
+}
+
+.recipe-group .recipe-group-cta a {
+  display: inline-block;
+  background: var(--rg-accent);
+  color: var(--rg-accent-text);
+  font-family: var(--heading-font-family, 'Libre Baskerville', serif);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 13px 32px;
+  border-radius: 16px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.recipe-group .recipe-group-cta a:hover {
+  opacity: 0.9;
+  text-decoration: none;
+  color: var(--rg-accent-text);
+}
+
+/* Override EDS button decoration */
+main .recipe-group .button-container { display: inline; }
+main .recipe-group a.button:any-link {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  text-decoration: none;
+  white-space: normal;
+}
+
+/* Responsive */
+@media (max-width: 899px) {
+  .recipe-group {
+    padding: 40px 16px;
+  }
+
+  .recipe-group h2 {
+    font-size: 24px;
+  }
+
+  .recipe-group .recipe-group-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe-group .recipe-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}

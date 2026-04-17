@@ -1,0 +1,118 @@
+/* Product Category Listing Block */
+.product-category-listing-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+  background-color: var(--light-color);
+}
+
+/* Remove section margins so background fills edge-to-edge */
+main > .section:has(.product-category-listing-wrapper) {
+  margin: 0;
+}
+
+.product-category-listing {
+  --pcl-bg: var(--light-color);
+  --pcl-text: #382312;
+  --pcl-title-color: #343434;
+  --pcl-gap: 32px;
+  --pcl-row-gap: 40px;
+  --pcl-card-size: 216px;
+
+  padding: 64px 24px;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+/* Header row (first row) */
+.product-category-listing > div:first-child {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.product-category-listing > div:first-child h2 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
+  color: var(--pcl-title-color);
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.product-category-listing > div:first-child p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--pcl-text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Category card rows (row 2+) — rendered as grid by JS */
+.product-category-listing .pcl-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--pcl-row-gap) var(--pcl-gap);
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.product-category-listing .pcl-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--pcl-text);
+  width: var(--pcl-card-size);
+}
+
+.product-category-listing .pcl-card img {
+  width: var(--pcl-card-size);
+  height: var(--pcl-card-size);
+  object-fit: contain;
+  display: block;
+}
+
+.product-category-listing .pcl-card .pcl-label {
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--pcl-text);
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* Reset button styling on links inside this block */
+main .product-category-listing .button-container {
+  display: inline;
+}
+
+main .product-category-listing a.button:any-link {
+  background: none;
+  border: none;
+  color: var(--pcl-text);
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Mobile adjustments */
+@media (width < 600px) {
+  .product-category-listing {
+    --pcl-card-size: 150px;
+    padding: 40px 16px;
+  }
+
+  .product-category-listing .pcl-card .pcl-label {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+}
+
+@media (width >= 900px) {
+  .product-category-listing {
+    padding: 64px 113px;
+  }
+}

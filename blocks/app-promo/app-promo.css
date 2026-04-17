@@ -1,0 +1,87 @@
+/* App Promo Block */
+main > .section > .app-promo-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+main > .section:has(.app-promo-wrapper) {
+  margin: 0;
+}
+
+.app-promo {
+  --app-promo-bg: #0047bb;
+  --app-promo-text: #ffffff;
+
+  background: var(--app-promo-bg);
+  color: var(--app-promo-text);
+  padding: 40px 24px;
+  max-width: 100%;
+}
+
+.app-promo p,
+.app-promo h3,
+.app-promo span {
+  color: var(--app-promo-text);
+}
+
+.app-promo p {
+  margin: 4px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.app-promo .app-promo-subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 0;
+}
+
+.app-promo h3 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.app-promo .app-promo-feature {
+  font-size: 16px;
+  margin: 4px 0;
+}
+
+.app-promo .app-promo-qr-container {
+  text-align: center;
+}
+
+.app-promo .app-promo-qr-container picture {
+  display: block;
+}
+
+.app-promo .app-promo-qr-container img {
+  width: 150px;
+  height: 150px;
+}
+
+.app-promo .app-promo-qr-caption {
+  text-align: center;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+@media (width >= 900px) {
+  .app-promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px;
+    gap: 40px;
+  }
+
+  .app-promo .app-promo-text {
+    flex: 1 1 0;
+    max-width: 550px;
+  }
+
+  .app-promo .app-promo-qr {
+    flex: 0 0 auto;
+    text-align: center;
+  }
+}

@@ -1,0 +1,71 @@
+.image-cards-alt {
+  --card-overlay-bg: rgb(0, 71, 187);
+  --card-text-color: #ffffff;
+  --card-height: 400px;
+  --card-gap: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  padding: 0;
+}
+
+@media (width >= 900px) {
+  .image-cards-alt {
+    flex-direction: row;
+  }
+}
+
+.image-cards-alt > div {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+  overflow: hidden;
+  min-height: var(--card-height);
+  flex: 1;
+}
+
+.image-cards-alt > div.image-card-large {
+  flex: 2;
+}
+
+.image-cards-alt > div.image-card-small {
+  flex: 1;
+}
+
+.image-cards-alt .image-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--card-overlay-bg);
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.image-cards-alt .image-card-overlay h2 {
+  color: var(--card-text-color);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-family: var(--body-font-family);
+}
+
+.image-cards-alt > div:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.image-cards-alt .image-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+main .image-cards-alt a.button:any-link {
+  color: var(--card-text-color);
+  text-decoration: none;
+}

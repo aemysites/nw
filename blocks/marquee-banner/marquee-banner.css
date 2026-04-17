@@ -1,0 +1,104 @@
+/* Marquee Banner — "What makes us No.1?" promo band */
+
+.marquee-banner-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.marquee-banner {
+  --banner-bg: #3a2a1a;
+  --banner-text: #fff6e3;
+  --banner-cta-bg: rgb(218, 0, 28);
+  --banner-cta-text: #fff6e3;
+  --banner-padding: 56px 40px;
+  --banner-radius: 24px;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--banner-radius);
+  max-width: 1140px;
+  margin: 0 auto;
+  color: var(--banner-text);
+}
+
+.marquee-banner > div {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Background image cell — positioned absolutely behind content */
+.marquee-banner > div > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.marquee-banner > div > div:first-child picture,
+.marquee-banner > div > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text content cell */
+.marquee-banner > div > div:last-child {
+  position: relative;
+  z-index: 1;
+  padding: var(--banner-padding);
+  max-width: 50%;
+}
+
+.marquee-banner h2 {
+  font-family: var(--heading-font-family, serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--banner-text);
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+
+.marquee-banner p {
+  font-size: 14px;
+  color: var(--banner-text);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+/* CTA button — uses strong wrapper for primary */
+main .marquee-banner a.button:any-link {
+  display: inline-block;
+  background: var(--banner-cta-bg);
+  color: var(--banner-cta-text);
+  border: none;
+  border-radius: 16px;
+  padding: 13px 32px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+main .marquee-banner a.button:any-link:hover {
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (width < 900px) {
+  .marquee-banner {
+    border-radius: 16px;
+    margin: 0 16px;
+  }
+
+  .marquee-banner > div > div:last-child {
+    max-width: 70%;
+    padding: 32px 20px;
+  }
+
+  .marquee-banner h2 {
+    font-size: 24px;
+  }
+}

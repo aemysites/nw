@@ -1,0 +1,200 @@
+/* Hero Carousel Block */
+main > .section:has(.hero-carousel-wrapper) {
+  margin: 0;
+}
+
+.hero-carousel-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  overflow: hidden;
+}
+
+/* Slide (row) */
+.hero-carousel > div.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none;
+}
+
+.hero-carousel > div.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Background image cell */
+.hero-carousel > div.slide > div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-carousel > div.slide > div:first-child picture,
+.hero-carousel > div.slide > div:first-child img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Logo cell */
+.hero-carousel > div.slide > div:nth-child(2) {
+  position: relative;
+  z-index: 1;
+  padding: 120px 0 0 15%;
+}
+
+.hero-carousel > div.slide > div:nth-child(2) picture,
+.hero-carousel > div.slide > div:nth-child(2) img {
+  width: 340px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Text content cell */
+.hero-carousel > div.slide > div:nth-child(3) {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 0 15%;
+  max-width: 55%;
+}
+
+.hero-carousel > div.slide > div:nth-child(3) h2 {
+  color: #fff6e3;
+  font-family: var(--heading-font-family, serif);
+  font-size: 44px;
+  font-weight: 700;
+  margin: 20px 0 0;
+  line-height: 1.15;
+}
+
+.hero-carousel > div.slide > div:nth-child(3) p {
+  color: #fff6e3;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 16px 0 0;
+}
+
+/* CTA Button */
+main .hero-carousel a.button:any-link {
+  display: inline-block;
+  background: rgb(218, 0, 28);
+  color: #fff6e3;
+  border: none;
+  border-radius: 16px;
+  padding: 13px 32px 12px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 18px;
+}
+
+main .hero-carousel a.button:any-link:hover {
+  background: rgb(180, 0, 22);
+}
+
+/* Navigation dots */
+.hero-carousel .carousel-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.hero-carousel .carousel-dots button {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 246, 227, 0.6);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.hero-carousel .carousel-dots button.active {
+  background: rgb(218, 0, 28);
+  border-color: rgb(218, 0, 28);
+}
+
+/* Navigation arrows */
+.hero-carousel .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgb(218, 0, 28);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.hero-carousel .carousel-arrow:hover {
+  background: rgb(180, 0, 22);
+}
+
+.hero-carousel .carousel-arrow.prev {
+  left: 24px;
+  background: rgba(80, 0, 20, 0.75);
+}
+
+.hero-carousel .carousel-arrow.next {
+  right: 24px;
+}
+
+/* Mobile responsiveness */
+@media (width < 900px) {
+  .hero-carousel {
+    height: 480px;
+  }
+
+  .hero-carousel > div.slide > div:nth-child(2) {
+    padding: 80px 0 0 24px;
+  }
+
+  .hero-carousel > div.slide > div:nth-child(2) img {
+    width: 200px;
+  }
+
+  .hero-carousel > div.slide > div:nth-child(3) {
+    padding: 0 24px 0 24px;
+    max-width: 100%;
+  }
+
+  .hero-carousel > div.slide > div:nth-child(3) h2 {
+    font-size: 28px;
+  }
+
+  .hero-carousel > div.slide > div:nth-child(3) p {
+    font-size: 14px;
+  }
+}

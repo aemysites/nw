@@ -1,0 +1,12 @@
+:root {
+  --heading-font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  --body-font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  --background-color: #ffffff;
+  --text-color: rgb(34, 34, 34);
+  --link-color: rgb(0, 71, 187);
+  --link-hover-color: rgb(0, 61, 161);
+  --section-padding: 20px;
+  --nav-height: 80px;
+}
+
+html, body { overflow: auto !important; }

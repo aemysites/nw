@@ -1,0 +1,42 @@
+main > .section:has(.promo-banner-wrapper) {
+  margin: 0;
+}
+
+.promo-banner-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.promo-banner {
+  --promo-bg-top: #fff6e3;
+  --promo-bg-bottom: #e2d7cc;
+
+  background: linear-gradient(0deg, var(--promo-bg-bottom) 50%, var(--promo-bg-top) 50%);
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-banner > div {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.promo-banner > div > div {
+  position: relative;
+  width: 100%;
+  padding-bottom: 24.9%; /* 340/1366 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.promo-banner > div > div > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

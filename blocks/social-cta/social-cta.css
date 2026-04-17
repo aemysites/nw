@@ -1,0 +1,40 @@
+.social-cta {
+  background-color: rgb(255, 246, 227);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.social-cta > div {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-cta h2 {
+  font-family: var(--heading-font-family);
+  font-size: 28px;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.social-cta p {
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.social-cta a.button,
+.social-cta strong a {
+  display: inline-block;
+  background-color: rgb(218, 0, 28);
+  color: #fff;
+  padding: 10px 32px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.social-cta strong a:hover {
+  background-color: #a00017;
+}

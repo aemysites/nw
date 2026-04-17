@@ -1,0 +1,209 @@
+/* Popular Products block */
+.popular-products-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.popular-products {
+  --pp-bg: #fff6e3;
+  --pp-title-color: #382312;
+  --pp-text-color: #000;
+  --pp-btn-bg: #da001c;
+  --pp-btn-color: #fff6e3;
+  --pp-padding: 50px 0 40px;
+
+  background: var(--pp-bg);
+  color: var(--pp-text-color);
+  padding: var(--pp-padding);
+  text-align: center;
+}
+
+/* Header row */
+.popular-products > div:first-child {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.popular-products h2 {
+  font-family: var(--heading-font-family, 'Libre Baskerville', serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--pp-title-color);
+  margin: 0;
+  font-style: italic;
+}
+
+.popular-products > div:first-child p {
+  font-family: var(--body-font-family, 'Poppins', sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--pp-title-color);
+  margin: 20px 0 0;
+}
+
+/* Product rows (carousel items) */
+.popular-products > div:not(:first-child) {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.popular-products .product-slide {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 48px;
+  text-align: left;
+}
+
+.popular-products .product-slide .product-image {
+  flex: 0 0 45%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 213px;
+}
+
+.popular-products .product-slide .product-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/drafts/images/product-background.svg') no-repeat center center;
+  background-size: contain;
+  z-index: 0;
+}
+
+.popular-products .product-slide .product-image picture {
+  position: relative;
+  z-index: 1;
+}
+
+.popular-products .product-slide .product-image img {
+  max-width: 220px;
+  max-height: 180px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.popular-products .product-slide .product-info h3 {
+  font-family: var(--heading-font-family, 'Libre Baskerville', serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--pp-title-color);
+  margin: 0 0 16px;
+}
+
+.popular-products .product-slide .product-info p {
+  font-family: var(--body-font-family, 'Poppins', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--pp-text-color);
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.popular-products .product-slide .product-info .buy-now {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pp-btn-bg);
+  color: var(--pp-btn-color);
+  font-family: var(--heading-font-family, 'Libre Baskerville', serif);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popular-products .product-slide .product-info .buy-now:hover {
+  opacity: 0.9;
+}
+
+/* Carousel dots */
+.popular-products .carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.popular-products .carousel-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.popular-products .carousel-dots button.active {
+  background: var(--pp-btn-bg);
+  border-color: var(--pp-btn-bg);
+}
+
+/* Carousel nav arrows */
+.popular-products .carousel-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  right: -20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.popular-products .carousel-nav button {
+  pointer-events: auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--pp-btn-bg);
+  color: white;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular-products .carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hide non-active slides when carousel JS runs */
+.popular-products .product-slide[aria-hidden="true"] {
+  display: none;
+}
+
+@media (max-width: 899px) {
+  .popular-products .product-slide {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .popular-products .product-slide .product-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .popular-products h2 {
+    font-size: 24px;
+  }
+
+  .popular-products .product-slide .product-info h3 {
+    font-size: 20px;
+  }
+}

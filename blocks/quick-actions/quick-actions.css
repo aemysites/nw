@@ -1,0 +1,131 @@
+.quick-actions {
+  --qa-text: #222222;
+  --qa-accent: #0047bb;
+  --qa-border: #808080;
+  --qa-padding: 20px 36px;
+  --qa-gap: 0px;
+}
+
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--qa-gap);
+  text-align: center;
+  color: var(--qa-text);
+  padding: 20px 0;
+}
+
+.quick-actions-wrapper {
+  margin-top: 40px !important;
+}
+
+@media (width >= 900px) {
+  .quick-actions {
+    flex-direction: row;
+  }
+}
+
+.quick-actions > div {
+  flex: 1;
+  padding: var(--qa-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-actions .quick-actions-action {
+  margin-top: auto;
+}
+
+.quick-actions .quick-actions-info h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 10px;
+  font-family: var(--heading-font-family, sans-serif);
+  line-height: 1.3;
+}
+
+.quick-actions .quick-actions-info p {
+  font-size: 18px;
+  margin: 0 0 26px;
+}
+
+.quick-actions select {
+  display: block;
+  width: 100%;
+  padding: 8px 24px 8px 8px;
+  margin: 0 0 16px;
+  font-size: 16px;
+  border: 1px solid var(--qa-border);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--qa-text);
+  font-family: inherit;
+  appearance: auto;
+}
+
+.quick-actions .quick-actions-go {
+  display: block;
+  width: 100%;
+  padding: 9px 10px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: inherit;
+  color: var(--qa-accent);
+  background: transparent;
+  border: 1px solid var(--qa-accent);
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.quick-actions .quick-actions-go:hover {
+  background: var(--qa-accent);
+  color: #fff;
+}
+
+.quick-actions .quick-actions-agent-form {
+  display: flex;
+  gap: 0;
+}
+
+.quick-actions .quick-actions-zip {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--qa-border);
+  border-radius: 4px 0 0 4px;
+  font-family: inherit;
+  min-width: 0;
+}
+
+.quick-actions .quick-actions-agent-form .quick-actions-go {
+  width: auto;
+  border-radius: 0 4px 4px 0;
+  padding: 8px 20px;
+  border-left: none;
+}
+
+/* Style the "Start quote" button - EDS will auto-decorate it as secondary */
+main .quick-actions a.button:any-link {
+  display: block;
+  width: 100%;
+  padding: 9px 10px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--qa-accent);
+  background: transparent;
+  border: 1px solid var(--qa-accent);
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+main .quick-actions a.button:any-link:hover {
+  background: var(--qa-accent);
+  color: #fff;
+}
+
+main .quick-actions .button-wrapper {
+  margin: 0;
+}
