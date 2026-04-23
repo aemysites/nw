@@ -1,0 +1,81 @@
+/* Hero Banner - Nationwide homepage hero */
+.hero-banner-container .hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-banner {
+  position: relative;
+  padding: 40px 24px;
+  min-height: 300px;
+  background-color: var(--brand-blue);
+}
+
+.hero-banner > div:first-child {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-banner h1,
+.hero-banner h2,
+.hero-banner p {
+  color: #fff;
+}
+
+.hero-banner h1 {
+  font-size: var(--heading-font-size-xxl);
+  margin-top: 0;
+}
+
+.hero-banner h2 {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  color: #fff;
+}
+
+.hero-banner a:any-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: var(--body-font-size-s);
+}
+
+.hero-banner a:hover {
+  text-decoration: underline;
+}
+
+/* Hero image - displayed alongside text on desktop */
+.hero-banner > div:first-child > div:first-child img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+@media (width >= 900px) {
+  .hero-banner {
+    padding: 60px 32px;
+  }
+
+  .hero-banner > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-banner > div:first-child > div:first-child {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .hero-banner > div:first-child > div:first-child img {
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .hero-banner > div:first-child > div:last-child {
+    flex: 1;
+  }
+}

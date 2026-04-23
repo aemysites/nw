@@ -1,0 +1,8 @@
+{
+  "variantName": "cards-tile",
+  "baseBlock": "cards",
+  "sourceUrl": "https://www.nationwide.com/",
+  "visualCharacteristics": "Image tile cards with background photos and overlay text, clickable as full-tile links",
+  "created": "2026-04-22",
+  "usedOn": ["content/nationwide"]
+}

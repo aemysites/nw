@@ -1,0 +1,5 @@
+{
+  "name": "Columns Promo",
+  "model": "columns-promo",
+  "baseBlock": "columns"
+}

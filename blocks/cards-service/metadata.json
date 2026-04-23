@@ -1,0 +1,8 @@
+{
+  "variantName": "cards-service",
+  "baseBlock": "cards",
+  "sourceUrl": "https://www.nationwide.com/",
+  "visualCharacteristics": "Icon-based service cards with heading, description, and CTA button on white background",
+  "created": "2026-04-22",
+  "usedOn": ["content/nationwide"]
+}

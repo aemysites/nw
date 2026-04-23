@@ -1,0 +1,51 @@
+/* Columns Promo - Two-column promotional layout */
+.columns-promo > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.columns-promo h3 {
+  font-size: var(--heading-font-size-xl);
+  color: #fff;
+  margin-top: 0;
+}
+
+.columns-promo p {
+  color: #fff;
+  font-size: var(--body-font-size-m);
+}
+
+.columns-promo img {
+  max-width: 200px;
+  height: auto;
+}
+
+.columns-promo > div > div {
+  order: 1;
+}
+
+.columns-promo > div > .columns-promo-img-col {
+  order: 0;
+  text-align: center;
+}
+
+.columns-promo > div > .columns-promo-img-col img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (width >= 900px) {
+  .columns-promo > div {
+    align-items: center;
+    flex-direction: unset;
+    gap: 40px;
+  }
+
+  .columns-promo > div > div {
+    flex: 1;
+    order: unset;
+  }
+}
