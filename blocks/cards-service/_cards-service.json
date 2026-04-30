@@ -1,0 +1,5 @@
+{
+  "name": "Cards Service",
+  "model": "cards-service",
+  "baseBlock": "cards"
+}

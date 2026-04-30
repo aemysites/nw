@@ -1,0 +1,8 @@
+{
+  "variantName": "columns-promo",
+  "baseBlock": "columns",
+  "sourceUrl": "https://www.nationwide.com/",
+  "visualCharacteristics": "Two-column promotional layout on blue background with feature list and QR code image",
+  "created": "2026-04-22",
+  "usedOn": ["content/nationwide"]
+}

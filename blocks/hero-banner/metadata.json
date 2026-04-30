@@ -1,0 +1,8 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "sourceUrl": "https://www.nationwide.com/",
+  "visualCharacteristics": "Blue background hero with heading, subheading, CTA links on left and promotional image on right",
+  "created": "2026-04-22",
+  "usedOn": ["content/nationwide"]
+}

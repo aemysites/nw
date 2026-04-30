@@ -1,0 +1,5 @@
+{
+  "name": "Cards Tile",
+  "model": "cards-tile",
+  "baseBlock": "cards"
+}
